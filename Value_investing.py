@@ -21,13 +21,8 @@ for row in table.findAll('tr')[1:]:
         tickers.append(ticker)
 print(tickers)
 
-# Let's create some dictionary to fill with data
-balanceSheet = {}
-incomeStatement = {}
-cashStatement = {}
 
-
-# I create three dictionary to use for store information
+# I create three dictionary to use for storing information
 
 balanceSheet = {}
 incomeStatement = {}
