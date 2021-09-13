@@ -41,10 +41,10 @@ def retrieve_stock_data(ticker):
         start = time.time()
         yahoo_financials = YahooFinancials(ticker)
         balance_sheet_data = yahoo_financials.get_financial_stmts('annual', 'balance')
-        income_statement_data = yahoo_financials.get_financial_stmts('annual', 'income') # in USa i can get quarterly info. The second parameter is what finalcial statement i want. 
+        income_statement_data = yahoo_financials.get_financial_stmts('annual', 'income') 
         cash_statement_data = yahoo_financials.get_financial_stmts('annual', 'cash')
 
-        balanceSheet[ticker] = balance_sheet_data['balanceSheetHistory'][ticker] # we create the dictionary using the stock key and we're subsectioning this data by thei parameters
+        balanceSheet[ticker] = balance_sheet_data['balanceSheetHistory'][ticker] 
         incomeStatement[ticker] = income_statement_data['incomeStatementHistory'][ticker]
         cashStatement[ticker] = cash_statement_data['cashflowStatementHistory'][ticker]
     except:
